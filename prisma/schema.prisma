@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         String   @default("admin")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Enquiry {
+  id        String   @id @default(uuid())
+  fullName  String
+  phone     String
+  email     String?
+  course    String
+  message   String
+  type      String   @default("admission") // admission, contact, partnership, workshop
+  status    String   @default("NEW") // NEW, CONTACTED, INTERESTED, CONVERTED, NOT_INTERESTED
+  notes     String?
+  source    String?  @default("website")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Course {
+  id           String   @id @default(uuid())
+  title        String
+  slug         String   @unique
+  description  String
+  outcomes     String   // JSON string of array
+  duration     String   @default("Contact us for details")
+  eligibility  String   @default("Students, Professionals & Job Seekers")
+  classFormat  String   @default("Offline Classroom & Interactive Workshops")
+  fees         String   @default("Contact us for details")
+  batchTimings String   @default("Morning & Evening Batches Available")
+  isPublished  Boolean  @default(true)
+  order        Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Workshop {
+  id             String   @id @default(uuid())
+  title          String
+  slug           String   @unique
+  subtitle       String?
+  description    String
+  type           String   // 30-day, 40-day, school, public-speaking, teacher-training
+  duration       String
+  targetAudience String
+  venue          String   @default("Academy Campus / Partner Institution")
+  status         String   @default("UPCOMING") // UPCOMING, COMPLETED
+  imageUrl       String?
+  order          Int      @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model GalleryItem {
+  id         String   @id @default(uuid())
+  title      String
+  caption    String?
+  category   String   // trainer, public-speaking, workshops, award-ceremonies, collaborations, classroom, training, certifications
+  imageUrl   String
+  isFeatured Boolean  @default(false)
+  order      Int      @default(0)
+  createdAt  DateTime @default(now())
+}
+
+model SiteContent {
+  id         String   @id @default(uuid())
+  sectionKey String   @unique
+  content    String   // JSON string
+  updatedAt  DateTime @updatedAt
+}
