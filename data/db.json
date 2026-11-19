@@ -379,6 +379,16 @@
   ],
   "galleryItems": [
     {
+      "id": "gallery-official-logo",
+      "title": "Academy of English Official Emblem",
+      "caption": "Official institutional seal of Academy of English",
+      "category": "certifications",
+      "imageUrl": "/images/logo/logo.png",
+      "isFeatured": true,
+      "order": 0,
+      "createdAt": "2026-11-19T10:27:48.788Z"
+    },
+    {
       "id": "gallery-trainer-hero",
       "title": "Trainer Faizan Addressing the Audience",
       "caption": "Trainer Md. Faizan Alam delivering an inspiring public speaking masterclass with confidence and purpose.",

@@ -67,6 +67,16 @@ export default async function AboutPage() {
       {/* Top Header */}
       <section className="relative pt-16 sm:pt-24 pb-12 bg-gradient-to-b from-[#111111] to-[#050505] border-b border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+          <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-[#F5D638] via-[#e63946] to-[#3157A5] shadow-xl shadow-[#F5D638]/20 mx-auto">
+            <Image
+              src="/images/logo/logo.png"
+              alt="Academy of English Official Logo"
+              width={80}
+              height={80}
+              className="w-full h-full object-contain rounded-full bg-black"
+              priority
+            />
+          </div>
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F5D638]/10 text-[#F5D638] text-xs font-bold border border-[#F5D638]/20 uppercase tracking-wider">
             About Our Academy
           </div>

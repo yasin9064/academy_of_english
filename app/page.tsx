@@ -84,8 +84,16 @@ export default async function HomePage() {
             {/* Left Column: Headlines & CTAs */}
             <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
               {/* Highlight Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#111111] border border-[#F5D638]/30 shadow-lg shadow-black/50">
-                <span className="w-2 h-2 rounded-full bg-[#F5D638] animate-pulse" />
+              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#111111] border border-[#F5D638]/30 shadow-lg shadow-black/50">
+                <div className="relative w-5 h-5 rounded-full overflow-hidden shrink-0 border border-[#F5D638]/60">
+                  <Image
+                    src="/images/logo/logo.png"
+                    alt="Academy of English Logo"
+                    width={20}
+                    height={20}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
                 <span className="text-xs sm:text-sm font-bold tracking-wider text-[#F5D638] uppercase">
                   {content.hero.highlight}
                 </span>
@@ -212,7 +220,15 @@ export default async function HomePage() {
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F5D638]/10 text-[#F5D638] text-xs font-semibold border border-[#F5D638]/20">
-                <Sparkles className="w-3.5 h-3.5" />
+                <div className="relative w-4 h-4 rounded-full overflow-hidden shrink-0">
+                  <Image
+                    src="/images/logo/logo.png"
+                    alt="Logo"
+                    width={16}
+                    height={16}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
                 <span>About The Institute</span>
               </div>
 

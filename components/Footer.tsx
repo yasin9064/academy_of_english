@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import {
   MapPin,
@@ -39,18 +40,21 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           {/* Col 1 & 2: Brand & Motto */}
           <div className="lg:col-span-2 space-y-5">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#F5D638] to-[#3157A5] p-0.5 shadow-lg shadow-[#F5D638]/20">
-                <div className="w-full h-full bg-[#050505] rounded-[10px] flex items-center justify-center">
-                  <span className="font-serif font-black text-2xl text-[#F5D638]">A</span>
-                  <span className="font-sans font-bold text-sm text-[#3157A5] -ml-0.5">E</span>
-                </div>
+            <div className="flex items-center gap-3.5">
+              <div className="relative w-14 h-14 rounded-full overflow-hidden p-0.5 bg-gradient-to-tr from-[#F5D638] via-[#e63946] to-[#3157A5] shadow-lg shadow-[#F5D638]/20 shrink-0">
+                <Image
+                  src="/images/logo/logo.png"
+                  alt="Academy of English Official Logo"
+                  width={56}
+                  height={56}
+                  className="w-full h-full object-contain rounded-full bg-black"
+                />
               </div>
               <div>
-                <h3 className="font-extrabold text-xl tracking-tight text-white">
+                <h3 className="font-extrabold text-xl tracking-tight text-white leading-tight">
                   ACADEMY OF ENGLISH
                 </h3>
-                <p className="text-xs text-zinc-400 font-medium tracking-wider uppercase">
+                <p className="text-xs text-zinc-400 font-medium tracking-wider uppercase leading-tight">
                   Institute of Personality Development
                 </p>
               </div>

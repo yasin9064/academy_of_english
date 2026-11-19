@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     siteName: 'Academy of English',
     images: [
       {
-        url: '/images/trainer/faizan_hero.png',
+        url: '/images/trainer/faizan_podium.png',
         width: 1200,
         height: 630,
         alt: 'Trainer Faizan Alam - Founder & Public Speaking Coach',
@@ -66,7 +66,14 @@ export const metadata: Metadata = {
     images: ['/images/trainer/faizan_hero.png'],
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/images/logo/logo.png', sizes: 'any', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png' },
+    ],
+    shortcut: '/favicon.ico',
   },
 };
 

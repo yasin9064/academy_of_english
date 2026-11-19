@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -62,11 +63,16 @@ export default function AdminLoginPage() {
     <div className="min-h-[80vh] flex items-center justify-center p-4">
       <div className="w-full max-w-md space-y-6">
         {/* Brand Top Header */}
-        <div className="text-center space-y-2">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#F5D638] to-[#3157A5] p-0.5 shadow-xl shadow-[#F5D638]/20 mx-auto">
-            <div className="w-full h-full bg-[#050505] rounded-[14px] flex items-center justify-center">
-              <Shield className="w-7 h-7 text-[#F5D638]" />
-            </div>
+        <div className="text-center space-y-3">
+          <div className="relative w-20 h-20 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-[#F5D638] via-[#e63946] to-[#3157A5] shadow-2xl shadow-[#F5D638]/25 mx-auto">
+            <Image
+              src="/images/logo/logo.png"
+              alt="Academy of English Official Logo"
+              width={80}
+              height={80}
+              className="w-full h-full object-contain rounded-full bg-black"
+              priority
+            />
           </div>
           <h1 className="text-2xl font-bold text-white font-serif">Academy Admin Portal</h1>
           <p className="text-xs text-zinc-400">

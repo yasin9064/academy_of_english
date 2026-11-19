@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getAdminSession } from '@/lib/auth';
 import {
   LayoutDashboard,
@@ -31,8 +32,14 @@ export default async function AdminLayout({
       <header className="bg-[#111111] border-b border-zinc-800 px-4 sm:px-6 py-3 flex items-center justify-between sticky top-0 z-40">
         <div className="flex items-center gap-3">
           <Link href="/admin" className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-[#F5D638] flex items-center justify-center font-serif font-black text-black text-sm">
-              AE
+            <div className="relative w-8 h-8 rounded-full overflow-hidden bg-black border border-[#F5D638]/70 shrink-0 p-0.5 shadow-sm">
+              <Image
+                src="/images/logo/logo.png"
+                alt="Academy of English Logo"
+                width={32}
+                height={32}
+                className="w-full h-full object-contain rounded-full"
+              />
             </div>
             <div>
               <span className="font-bold text-sm tracking-tight text-white block">

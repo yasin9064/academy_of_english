@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Phone, MessageSquare, Shield, ChevronRight, Sparkles } from 'lucide-react';
 
@@ -88,17 +89,21 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-[#F5D638] to-[#3157A5] p-0.5 shadow-lg shadow-[#F5D638]/20 group-hover:shadow-[#F5D638]/40 transition-shadow">
-                <div className="w-full h-full bg-[#050505] rounded-[10px] flex items-center justify-center">
-                  <span className="font-serif font-black text-xl text-[#F5D638]">A</span>
-                  <span className="font-sans font-bold text-xs text-[#3157A5] -ml-0.5">E</span>
-                </div>
+              <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden p-0.5 bg-gradient-to-tr from-[#F5D638] via-[#e63946] to-[#3157A5] shadow-lg shadow-[#F5D638]/20 group-hover:shadow-[#F5D638]/40 group-hover:scale-105 transition-all shrink-0">
+                <Image
+                  src="/images/logo/logo.png"
+                  alt="Academy of English Official Logo"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-contain rounded-full bg-black"
+                  priority
+                />
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-base sm:text-lg tracking-tight text-white group-hover:text-[#F5D638] transition-colors">
+                <span className="font-bold text-base sm:text-lg tracking-tight text-white group-hover:text-[#F5D638] transition-colors leading-tight">
                   ACADEMY OF ENGLISH
                 </span>
-                <span className="text-[10px] sm:text-[11px] font-medium tracking-wider text-zinc-400 uppercase">
+                <span className="text-[10px] sm:text-[11px] font-medium tracking-wider text-zinc-400 uppercase leading-tight">
                   Institute of Personality Development
                 </span>
               </div>

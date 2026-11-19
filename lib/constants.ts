@@ -557,6 +557,16 @@ export const SCHOOL_COLLABORATIONS: SchoolCollaboration[] = [
 
 export const INITIAL_GALLERY_ITEMS: GalleryItem[] = [
   {
+    id: 'gallery-official-logo',
+    title: 'Academy of English Official Emblem',
+    caption: 'Official institutional seal of Academy of English – Institute of Personality Development. "We Teach, We Train, We Transform."',
+    category: 'certifications',
+    imageUrl: '/images/logo/logo.png',
+    isFeatured: true,
+    order: 0,
+    createdAt: new Date().toISOString(),
+  },
+  {
     id: 'gallery-trainer-hero',
     title: 'Trainer Faizan Addressing the Audience',
     caption: 'Trainer Md. Faizan Alam delivering an inspiring public speaking masterclass with confidence and purpose.',
