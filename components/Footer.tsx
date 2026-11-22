@@ -84,7 +84,7 @@ export default function Footer() {
               </span>
               <div className="flex items-center gap-3">
                 <a
-                  href="https://www.youtube.com/@academyofenglish"
+                  href="https://www.youtube.com/@academyofenglish06"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl bg-[#111111] border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-red-500 hover:border-red-500/50 hover:bg-red-500/10 transition-all"
